@@ -23,7 +23,7 @@ hr{
     width:100%;
 }
     
-.welcome{
+/* .welcome{
     font-family: "myriad-pro",sans-serif;
     font-style: normal;
     font-weight: 100;
@@ -31,7 +31,7 @@ hr{
     margin-bottom:25px;
     margin-top:50px;
 
-}
+} */
 
 .text-center {
 	text-align: center;
@@ -69,7 +69,7 @@ hr{
     background-color: #FFFFFF;
     /* just in case there no content*/
     padding: 1px 25px 30px;
-    margin: 0 auto 25px;
+    margin: 70px auto 25px;
     margin-top: 15%x;
     /* shadows and rounded borders */
     -moz-border-radius: 2px;
