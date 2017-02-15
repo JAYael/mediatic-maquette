@@ -14,6 +14,11 @@
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="jquery/jquery.js"></script>
   <script src="bootstrap/js/bootstrap.js"></script>
+  <style>
+  	#type-selectionnable {
+  		display: block;
+  	}
+  </style>
 </head>
 <body>
 <header>
@@ -56,9 +61,48 @@
 	      <label for = "auteur-recherche">Auteur</label>
 	      <input type = "text" class = "form-control" id = "titre-recherche" placeholder = "Auteur *">
 	   </div>
-	   <button type="submit" class = "btn btn-default">Recherche</button>
-	   <a class="btn btn-info" href="media-creation" role="button">Ajouter</a>
+	   <button type="submit" class="btn btn-default">Rechercher</button>
+	   <button type="button" class="btn btn-info" data-toggle="modal" data-target="#ajouter-modal">Ajouter</button>
 	</form>
+	<!-- Modal -->
+  	<div class="modal fade" id="ajouter-modal" role="dialog">
+    	<div class="modal-dialog">
+	    <!-- Modal content-->
+      		<div class="modal-content">
+        		<div class="modal-header">
+          			<button type="button" class="close" data-dismiss="modal">&times;</button>
+          			<h4 class="modal-title">Ajouter un  media</h4>
+        		</div>
+		        <div class="modal-body">
+		          <form>
+				  	<div class="form-group">
+				    	<label for="titre-creation">Titre</label>
+				    	<input type="text" class="form-control" id="titre">
+				  	</div>
+				  	<div class="form-group">
+				    	<label for="auteur-creation">Auteur</label>
+				    	<input type="email" class="form-control" id="auteur-creation">
+				  	</div>
+				  	<div class="form-group">
+				  	<label for="type-selectionnable">Type</label>
+					  	<select id="type-selectionnable">
+						  <option value="livres">Livres</option>
+						  <option value="cd">CD</option>
+						  <option value="dvd">DVD</option>
+						</select>
+					</div>
+				  	<div class="form-group">
+						<label for="image-media">Image de couverture</label>
+				    	<input type="file" name="image-media" value="image" id="image-media">
+				  	</div>
+				</form>
+	        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-default">Ajouter</button>
+        </div>
+      </div>
+      
+    </div>
 	</div>
 	<div class="Info">
 	</div>
@@ -104,21 +148,21 @@
 		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
 		<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
 		<style>
-#result tbody tr:hover,
-#result tbody tr:focus {
-	cursor: pointer;
-}
-		</style>
-		<script>
-$(document).ready(function() {
-	
-	$('#result').DataTable({
-		filter: false,
-		info: false,
-		paging: false
-	});
-	
-});
+		#result tbody tr:hover,
+		#result tbody tr:focus {
+			cursor: pointer;
+		}
+				</style>
+				<script>
+		$(document).ready(function() {
+			
+			$('#result').DataTable({
+				filter: false,
+				info: false,
+				paging: false
+			});
+			
+		});
 		</script>
 	</div>
 </div><!-- /.container -->
