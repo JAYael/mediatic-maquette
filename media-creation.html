@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Maquette de l'interface d'une application de gestion d'une bibliothèque">
+  <meta name="author" content="T_S, LB_K, D_A, J_A">
+  <title>Creation - Media - Maquette - Mediatic</title>
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="jquery/jquery.js"></script>
+  <script src="bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+<header>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Mediatic</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="media-recherche.html">Médias</a></li>
+					<li><a href="adherent-recherche.html">Adhérents</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Compte </a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Se connecter </a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+<div class="container">
+	<div class="row">
+			<div class="col-sm-12">
+				<h3 class = "title-media-fiche">Créer un média </h3>
+				<div class="form-group">
+					<label>Titre</label>
+					<input type="text" class="form-control"> 
+					<label>Auteur</label>
+					<input type="text" class="form-control"> 
+					<label >Type</label>
+					<select class="form-control">
+						<option>Livre</option>
+						<option>CD</option>
+						<option>DVD</option>
+					</select>
+				</div>
+				<button type="submit" class="btn btn-default pull-right">Enregistrer</button>
+			</div>
+		</div>
+</div><!-- /.container -->
+<footer>
+</footer>
+</body>
+</html>
