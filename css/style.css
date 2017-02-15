@@ -1,3 +1,10 @@
 .title-media-fiche{
 	background-color : LightSteelBlue ;
 }
+
+.case-border {
+	padding : 15px;
+    border: 2px solid LightSteelBlue;
+    border-radius: 12px;
+    background-color : rgb(219, 228, 240);
+}
