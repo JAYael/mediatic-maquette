@@ -17,26 +17,52 @@
 </head>
 <body>
 <header>
-	<nav class="navbar navbar-default">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-				<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Mediatic</a>
-			</div>
-			<div class="collapse navbar-collapse" id="myNavbar">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="media-recherche.html">Médias</a></li>
-					<li><a href="adherent-recherche.html">Adhérents</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Compte </a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Se connecter </a></li>
-				</ul>
-			</div>
+<nav class="navbar navbar-default">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Mediatic</a>
 		</div>
-	</nav>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="media-recherche.html">Médias</a></li>
+				<li><a href="adherent-recherche.html">Adhérents</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Compte </a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Se connecter </a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="container">
+	<div class="Recherche">
+	<form class = "form-inline" role = "form">   
+	   <div class = "form-group">
+	      <label for = "type-selectionnable">type</label>
+	       <select id="type-selectionnable">
+			  <option value="livres">Livres</option>
+			  <option value="cd">CD</option>
+			  <option value="dvd">DVD</option>
+			</select>
+	   </div>
+	   <div class = "form-group">
+	      <label for = "titre-recherche">Titre</label>
+	      <input type = "text" class = "form-control" id = "titre-recherche" placeholder = "tapez le titre ici">
+	   </div>	   
+	   <div class = "form-group">
+	      <label for = "auteur-recherche">Auteur</label>
+	      <input type = "text" class = "form-control" id = "titre-recherche" placeholder = "Auteur *">
+	   </div>
+	   <button type="submit" class = "btn btn-default">Recherche</button>
+	   <a class="btn btn-info" href="media-creation" role="button">Ajouter</a>
+	</form>
+	</div>
+	<div class="Info">
+	</div>
+</div>
 </header>
 <div class="container">
 	<div class="row">
