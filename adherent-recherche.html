@@ -1,112 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Maquette de l'interface d'une application de gestion d'une bibliothèque">
-  <meta name="author" content="T_S, LB_K, D_A, J_A">
-  <title>Recherche - Media - Maquette - Mediatic</title>
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.css">
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-  <!-- Bootstrap core JavaScript
-  ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="jquery/jquery.js"></script>
-  <script src="bootstrap/js/bootstrap.js"></script>
-  <style>
-  	#type-selectionnable {
-  		display: block;
-  	}
-  </style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Maquette de l'interface d'une application de gestion d'une bibliothèque">
+	<meta name="author" content="T_S, LB_K, D_A, J_A">
+	
+	<title>Recherche - Adhérents - Maquette - Mediatic</title>
+	
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<script src="bootstrap/js/bootstrap.js"></script>
+	
+	<!-- jQuery -->
+	<script src="jquery/jquery.js"></script>
+	
+	<!-- DataTable -->
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
+	<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			
+			$('#result').DataTable({
+				filter: false,
+				info: false,
+				paging: false
+			});
+			
+		});
+	</script>
 </head>
 <body>
 <header>
-<nav class="navbar navbar-default">
-	<div class="container">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-			<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">Mediatic</a>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Mediatic</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li><a href="media-recherche.html">Médias</a></li>
+					<li class="active"><a href="adherent-recherche.html">Adhérents</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Compte </a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Se connecter </a></li>
+				</ul>
+			</div>
 		</div>
-		<div class="collapse navbar-collapse" id="myNavbar">
-			<ul class="nav navbar-nav">
-				<li><a href="media-recherche.html">Médias</a></li>
-				<li class="active"><a href="adherent-recherche.html">Adhérents</a></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Compte </a></li>
-				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Se connecter </a></li>
-			</ul>
-		</div>
-	</div>
-</nav>
-<div class="container">
-	<div class="Recherche">
-	<form class = "form-inline" role = "form">   
-	   <div class = "form-group">
-	      <label for = "type-selectionnable">type</label>
-	       <select id="type-selectionnable">
-			  <option value="livres">Livres</option>
-			  <option value="cd">CD</option>
-			  <option value="dvd">DVD</option>
-			</select>
-	   </div>
-	   <div class = "form-group">
-	      <label for = "titre-recherche">Titre</label>
-	      <input type = "text" class = "form-control" id = "titre-recherche" placeholder = "tapez le titre ici">
-	   </div>	   
-	   <div class = "form-group">
-	      <label for = "auteur-recherche">Auteur</label>
-	      <input type = "text" class = "form-control" id = "titre-recherche" placeholder = "Auteur *">
-	   </div>
-	   <button type="submit" class="btn btn-default">Rechercher</button>
-	   <button type="button" class="btn btn-info" data-toggle="modal" data-target="#ajouter-modal">Ajouter</button>
-	</form>
-	<!-- Modal -->
-  	<div class="modal fade" id="ajouter-modal" role="dialog">
-    	<div class="modal-dialog">
-	    <!-- Modal content-->
-      		<div class="modal-content">
-        		<div class="modal-header">
-          			<button type="button" class="close" data-dismiss="modal">&times;</button>
-          			<h4 class="modal-title">Ajouter un  media</h4>
-        		</div>
-		        <div class="modal-body">
-		          <form>
-				  	<div class="form-group">
-				    	<label for="titre-creation">Titre</label>
-				    	<input type="text" class="form-control" id="titre">
-				  	</div>
-				  	<div class="form-group">
-				    	<label for="auteur-creation">Auteur</label>
-				    	<input type="email" class="form-control" id="auteur-creation">
-				  	</div>
-				  	<div class="form-group">
-				  	<label for="type-selectionnable">Type</label>
-					  	<select id="type-selectionnable">
-						  <option value="livres">Livres</option>
-						  <option value="cd">CD</option>
-						  <option value="dvd">DVD</option>
-						</select>
-					</div>
-				  	<div class="form-group">
-						<label for="image-media">Image de couverture</label>
-				    	<input type="file" name="image-media" value="image" id="image-media">
-				  	</div>
-				</form>
-	        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-default">Ajouter</button>
-        </div>
-      </div>
-      
-    </div>
-	</div>
-	<div class="Info">
-	</div>
-</div>-->
+	</nav>
 </header>
 <div class="container">
 	<div class="row">
@@ -121,49 +67,29 @@
 					<th>Nom</th>
 					<th>Prénom</th>
 					<th>Date de naissance</th>
-					<th>Disponibles</th>
-					<th>Empruntés</th>
+					<th>Cotisation à jour</th>
+					<th>Médias empruntés</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr onclick="window.location.href='media-fiche?id=1'">
+				<tr onclick="window.location.href='adherent-fiche?id=1'">
 					<td>Abc</td>
-					<td>Livre</td>
-					<td>Auteur1, Prénom</td>
-					<td>2016-02-12</td>
-					<td>0</td>
+					<td>Dupont</td>
+					<td>Jean</td>
+					<td>1990-02-12</td>
+					<td>Oui</td>
 					<td>2</td>
 				</tr>
-				<tr onclick="window.location.href='media-fiche?id=2'">
+				<tr onclick="window.location.href='adherent-fiche?id=2'">
 					<td>Def</td>
-					<td>CD</td>
-					<td>Auteur2, Prénom</td>
-					<td>2016-04-01</td>
-					<td>1</td>
-					<td>1</td>
+					<td>Martin</td>
+					<td>Jacques</td>
+					<td>1987-04-01</td>
+					<td>Non</td>
+					<td>4</td>
 				</tr>
 			</tbody>
 		</table>
-		
-		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
-		<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
-		<style>
-		#result tbody tr:hover,
-		#result tbody tr:focus {
-			cursor: pointer;
-		}
-				</style>
-				<script>
-		$(document).ready(function() {
-			
-			$('#result').DataTable({
-				filter: false,
-				info: false,
-				paging: false
-			});
-			
-		});
-		</script>
 	</div>
 </div><!-- /.container -->
 <footer>
