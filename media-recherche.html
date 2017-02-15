@@ -67,9 +67,59 @@
 <div class="container">
 	<div class="row">
     	<div>
-      	<h1>Bootstrap starter template</h1>
-      	<p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-   	 	</div>
+			<h1>Recherche de média</h1>
+		</div>
+		
+		<table id="result" class="table table-striped table-responsive table-hover">
+			<thead>
+				<tr>
+					<td>Titre</td>
+					<td>Type</td>
+					<td>Auteur</td>
+					<td>Premier disponible</td>
+					<td>Disponibles</td>
+					<td>Empruntés</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr onclick="window.location.href='media-fiche?id=1'">
+					<td>Abc</td>
+					<td>Livre</td>
+					<td>Auteur1, Prénom</td>
+					<td>2016-02-12</td>
+					<td>0</td>
+					<td>2</td>
+				</tr>
+				<tr onclick="window.location.href='media-fiche?id=2'">
+					<td>Def</td>
+					<td>CD</td>
+					<td>Auteur2, Prénom</td>
+					<td>2016-04-01</td>
+					<td>1</td>
+					<td>1</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
+		<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+		<style>
+#result tbody tr:hover,
+#result tbody tr:focus {
+	cursor: pointer;
+}
+		</style>
+		<script>
+$(document).ready(function() {
+	
+	$('#result').DataTable({
+		filter: false,
+		info: false,
+		paging: false
+	});
+	
+});
+		</script>
 	</div>
 </div><!-- /.container -->
 <footer>
