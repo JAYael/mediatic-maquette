@@ -1,0 +1,7 @@
+#type-selectionnable {
+	display: block;
+}
+
+#result tbody tr:hover, #result tbody tr:focus {
+	cursor: pointer;
+}
