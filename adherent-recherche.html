@@ -51,6 +51,100 @@
 			</div>
 		</div>
 	</nav>
+	<div class="container">
+			<div class="Recherche">
+				<form class="form-inline" role="form">
+					<div class="form-group">
+						<label for="nom-recherche">Nom</label> 
+						<input type="text"
+							class="form-control" id="nom-recherche"
+							placeholder="Nom">
+					</div>
+					<div class="form-group">
+						<label for="prenom-recherche">prenom</label> 
+						<input type="text"
+							class="form-control" id="titre-recherche" placeholder="Prenom">
+					</div>
+					<a href="#" class="btn btn-default" 
+   							data-toggle="modal" 
+  							data-target="#rechercher-modal">Rechercher</a>
+					<a href="#" class="btn btn-primary" 
+   							data-toggle="modal" 
+  							data-target="#ajouter-modal">Ajouter</a>
+				</form>
+				<!-- Modal - Rechercher -->
+				<div class="modal fade" id="rechercher-modal" role="dialog">
+					<div class="modal-dialog">
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h2 class="modal-title">Rechercher un adherent</h2>
+							</div>
+							<div class="modal-body">
+								<form>
+									<div class="form-group">
+										<label for="nom-creation">Nom</label> 
+										<input type="text"
+											class="form-control" id="nom-creation">
+									</div>
+									<div class="form-group">
+										<label for="prenom-creation">Prenom</label> 
+										<input
+											type="text" class="form-control" id="prenom-creation">
+									</div>
+									<div class="form-group">
+										<label for="date-de-baissance-creation">Date de naissance</label> 
+										<input
+											type="date" class="form-control" id="date-de-baissance-creation">
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" id="rechercher-creation-detail">Rechercher</button>
+								<button type="button" class="btn btn-default" id="Modifier-creation-detail">Modifier</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fin du modal - Rechercher -->
+				<!-- Modal - Ajouter -->
+				<div class="modal fade" id="ajouter-modal" role="dialog">
+					<div class="modal-dialog">
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h2 class="modal-title">Ajouter un adherent</h2>
+							</div>
+							<div class="modal-body">
+								<form>
+									<div class="form-group">
+										<label for="nom-creation">Nom</label> 
+										<input type="text"
+											class="form-control" id="nom-creation">
+									</div>
+									<div class="form-group">
+										<label for="prenom-creation">Prenom</label> 
+										<input
+											type="text" class="form-control" id="prenom-creation">
+									</div>
+									<div class="form-group">
+										<label for="date-de-baissance-creation">Date de naissance</label> 
+										<input
+											type="date" class="form-control" id="date-de-baissance-creation">
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" >Ajouter</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fin du modal - Ajouter -->
+			</div>
+		</div>
 </header>
 <div class="container">
 	<div class="row">
