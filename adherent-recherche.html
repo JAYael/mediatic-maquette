@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" href="css/recherche.css">
 	<link rel="stylesheet" type="text/css" href="DataTables/datatables.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<!-- js -->
 	<script src="jquery/jquery.js"></script>
 	<script src="bootstrap/js/bootstrap.js"></script>	
@@ -20,27 +21,26 @@
 	<script type="text/javascript" src="DataTables/datatables.js"></script>
 </head>
 <body>
-<header>
-	<nav class="navbar navbar-default">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-				<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Mediatic</a>
+	<header>
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+					</button>
+					<a class="brand" href="#"><img src="ressources/logo.jpg" width="150" height="50"></a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li><a href="media-recherche.html"><span class="glyphicon glyphicon-th-list"></span> Médias</a></li>
+						<li class="active-onglet"><a href="adherent-recherche.html"><span class="glyphicon glyphicon-user"></span> Adhérents</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Se déconnecter </a></li>
+					</ul>
+				</div>
 			</div>
-			<div class="collapse navbar-collapse" id="myNavbar">
-				<ul class="nav navbar-nav">
-					<li><a href="media-recherche.html">Médias</a></li>
-					<li class="active"><a href="adherent-recherche.html">Adhérents</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Compte </a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Se connecter </a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+		</nav>
 	<div class="container">
 			<div class="Recherche">
 				<form class="form-inline" role="form">
